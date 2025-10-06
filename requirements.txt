@@ -1,0 +1,6 @@
+dataclasses
+PyPDF2
+pandas
+streamlit
+backend
+job_descriptions
