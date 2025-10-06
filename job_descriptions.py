@@ -1,4 +1,4 @@
-from pypdf import PdfReader
+from PyPDF2 import PdfReader
 import pandas as pd
 import datetime as dt
 from dataclasses import dataclass
@@ -178,6 +178,7 @@ def to_df():
     return pd.DataFrame([job.__dict__ for job in Job_Descriptions]),  pd.DataFrame([trip.__dict__ for trip in Job_Trips])
 
     
+
 
 
 
