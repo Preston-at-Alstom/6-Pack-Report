@@ -1,4 +1,4 @@
-from pypdf import PdfReader
+from PyPDF2  import PdfReader
 import datetime as dt
 
 # return page number based on day of week
@@ -62,6 +62,7 @@ def clean_up_line(line):
 
         if not any(conditions):
             filtered_line.append(item)
+
 
 
     return filtered_line
