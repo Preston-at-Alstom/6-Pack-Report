@@ -1,8 +1,6 @@
-dataclasses
-PyPDF2
-pandas
-streamlit
 backend
+dataclasses
+pandas
 job_descriptions
 consist_list
 crew_lineup
@@ -10,4 +8,6 @@ date_tools
 equipment_lineup
 file_tools
 job-descriptions
+PyPDF2
+
 
