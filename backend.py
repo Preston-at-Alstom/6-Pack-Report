@@ -1,6 +1,6 @@
 import consist_list
 import crew_lineup
-import job_descriptions.py
+import job_descriptions
 import equipment_lineup
 import date_tools
 
@@ -84,6 +84,7 @@ def main(dispatch_sheet, crew_lineup_sheet, size):
     #  sorted_trips.to_excel('trips.xlsx', index=False) 
     #  onduty_list.to_excel('onduty.xlsx', index=False) 
     #  crew_lineup_df.to_excel('line_up.xlsx', index=False)
+
 
 
 
