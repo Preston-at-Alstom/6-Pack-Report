@@ -1,3 +1,4 @@
+streamlit
 dataclasses
 pandas
 PyPDF2
