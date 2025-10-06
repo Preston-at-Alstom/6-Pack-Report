@@ -9,4 +9,5 @@ crew_lineup
 date_tools
 equipment_lineup
 file_tools
+job-descriptions
 
