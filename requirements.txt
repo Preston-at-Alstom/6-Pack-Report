@@ -2,3 +2,4 @@ streamlit
 dataclasses
 pandas
 PyPDF2
+openpyxl
