@@ -1,7 +1,7 @@
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 import datetime as dt
 
-# retun page number based on day of week
+# return page number based on day of week
 def page_selector():
 
     work_day = dt.datetime.today().weekday()
