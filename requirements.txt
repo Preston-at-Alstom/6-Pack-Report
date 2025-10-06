@@ -1,5 +1,5 @@
 dataclasses
-pypdf
+PyPDF2
 pandas
 streamlit
 backend
