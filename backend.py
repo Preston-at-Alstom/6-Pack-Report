@@ -20,7 +20,7 @@ def main(dispatch_sheet, crew_lineup_sheet, consist_size):
     ## Equipment info ##
     # get list of starting trains
     AM_consist_list = list(set(filtered_consist_df['AM Train Number'].tolist()))
-    
+   
     
     ## Train info ##    
     # get all trains connected to starting trains
@@ -48,14 +48,6 @@ def main(dispatch_sheet, crew_lineup_sheet, consist_size):
     final_df = final_df.sort_values(by='on_duty')
     final_df = final_df[['Tour #',	'on_duty', 'on_duty_location', 'QCTO Daily', 'CTO Daily', 'CSA Daily', 'Extra CTO Daily']]
 
-    for loop in consist_cycles_lists:
-        print (loop)
-
-    print (final_df)
-
-    
-    
-    
     
     filename = f'{consist_size} Report {month} {day}.xlsx'
 
@@ -64,6 +56,7 @@ def main(dispatch_sheet, crew_lineup_sheet, consist_size):
     final_df.to_excel(filename, index=False)
     
     return filename
+
 
 
 
