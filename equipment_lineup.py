@@ -1,7 +1,7 @@
-from PyPDF2  import PdfReader
+from pypdf import PdfReader
 import datetime as dt
 
-# return page number based on day of week
+# retun page number based on day of week
 def page_selector():
 
     work_day = dt.datetime.today().weekday()
@@ -35,14 +35,35 @@ def get_connected_trains(equip_file, starting_trains):
     page_content = reader.pages[selected_page].extract_text()
     
 
+    consist_cycles = []
     all_following_trains = []
     for line in page_content.splitlines():
         if any(str(item) in line for item in starting_trains):
             all_following_trains = all_following_trains +  clean_up_line(line)
+            consist_cycles.append(clean_up_line(line))
+    
+    return consist_cycles, all_following_trains
+
+
+def get_connected_trains2(equip_file, starting_trains):
+
+
+    # creating a pdf reader object
+    reader = PdfReader(equip_file)
+
+    # select page number based on day of week
+    selected_page = page_selector()
+
+    # get all text off selected page
+    page_content = reader.pages[selected_page].extract_text()
+    
+
+    for line in page_content.splitlines():
+        if any(str(item) in line for item in starting_trains):
+           print (clean_up_line(line))
 
     
-    return all_following_trains
-
+    
 
 # remove everything 
 def clean_up_line(line):
@@ -64,5 +85,6 @@ def clean_up_line(line):
             filtered_line.append(item)
 
 
-
     return filtered_line
+
+
