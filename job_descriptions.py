@@ -7,8 +7,8 @@ from dataclasses import dataclass
 # Selects the weekday or weekend package
 def package_selector():
 
-    weekday_package = 'TO-ON-25-181  Job Descriptions  WeekDAYs  eff September 21 2025.pdf'
-    weekend_package = 'TO-ON-25-181 Job Descriptions  WeekENDs  eff September 21 2025.pdf'
+    weekday_package = 'TO-ON-25-248  Job Descriptions  WeekDAYs - REV1 Updated  eff November 16 2025.pdf'
+    weekend_package = 'TO-ON-25-248  Job Descriptions  WeekENDs - REV1 Updated  eff November 16 2025.pdf'
 
 
     work_day = dt.datetime.today().weekday()
@@ -43,9 +43,8 @@ def to_df():
     # Select Weekday or Weekend Package
     selected_job_package = package_selector()
     
-    #selected_job_package = 'TO-ON-25-203 Job Descriptions  LSW Zone II Closure  Friday September 26 2025 ONLY.pdf'
+    #selected_job_package = 'TO-ON-25-249 Job Descriptions  LSE Stouffville Guelph Work Block  Friday November 14 2025 ONLY.pdf'
 
-   
     
     # create Job template
     @dataclass
@@ -72,7 +71,6 @@ def to_df():
         departure           : str = ''
         arrival             : str = ''
         operating_days      : str = ''
-    
     
     
     
@@ -178,8 +176,6 @@ def to_df():
     return pd.DataFrame([job.__dict__ for job in Job_Descriptions]),  pd.DataFrame([trip.__dict__ for trip in Job_Trips])
 
     
-
-
 
 
 
