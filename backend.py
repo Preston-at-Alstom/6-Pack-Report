@@ -8,7 +8,8 @@ import pandas as pd
 
 def main(dispatch_sheet, crew_lineup_sheet, consist_size):
     # Convert sheets to Dataframes (Consist, Crews, Jobs, Trips)
-    equip_lineup_pdf = '(FINAL) Equipment Lineup - October 2025 Board eff. Oct 27, 2025.pdf'
+    equip_lineup_pdf = '(REV1) Equipment Lineup - November 2025 Board eff. Nov. 23, 2025.pdf'
+
     month, day, year = date_tools.get_date()    
     consist_df = consist_list.to_df(dispatch_sheet)
     crew_lineup_df = crew_lineup.to_df(crew_lineup_sheet)
@@ -56,6 +57,7 @@ def main(dispatch_sheet, crew_lineup_sheet, consist_size):
     final_df.to_excel(filename, index=False)
     
     return filename
+
 
 
 
